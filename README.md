@@ -2,8 +2,6 @@
 
 An enhanced Solana AI agent skill — teaches program development, **executes on-chain actions**, covers native + Anchor programs, 11 DeFi protocols, and comprehensive security.
 
-Forked from [x4484/solana-wingman](https://github.com/x4484/solana-wingman) and expanded with execution tooling, native SDK modules, expanded DeFi protocol docs, and security content.
-
 ## Quick Start
 
 ```bash
@@ -262,7 +260,7 @@ MIT License — Use freely for learning and building.
 
 ## Credits
 
-Forked from [x4484/solana-wingman](https://github.com/x4484/solana-wingman) by x4484.
+Inspired by [x4484/solana-wingman](https://github.com/x4484/solana-wingman) by x4484.
 
 Inspired by [ethereum-wingman](https://github.com/austintgriffith/ethereum-wingman) by Austin Griffith.
 
