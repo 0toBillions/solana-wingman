@@ -262,6 +262,8 @@ MIT License — Use freely for learning and building.
 
 ## Credits
 
+Forked from [x4484/solana-wingman](https://github.com/x4484/solana-wingman) by x4484.
+
 Inspired by [ethereum-wingman](https://github.com/austintgriffith/ethereum-wingman) by Austin Griffith.
 
 Built for the Solana developer community. Knowledge sourced from:
