@@ -49,9 +49,9 @@ Before ANY on-chain action, confirm the network:
     Is this the correct network? (devnet / testnet / mainnet-beta)
 ```
 
-- **Default to devnet** unless the user explicitly says mainnet
-- If the user says "mainnet" or "production", add an extra confirmation step
-- Never assume mainnet. Always ask if unclear.
+- **Default is mainnet-beta** — always confirm the network before executing
+- Show a clear confirmation prompt with the network name
+- For high-value operations (> 1 SOL), require explicit user confirmation
 
 ### 2. Amount Validation
 
@@ -63,14 +63,15 @@ Before transfers or swaps:
    From:      <SENDER_ADDRESS>
    To:        <RECIPIENT_ADDRESS>
    Amount:    2.5 SOL
-   Network:   devnet
+   Network:   mainnet-beta
 
    Proceed? (yes/no)
 ```
 
-- Verify the amount is reasonable (flag if > 10 SOL on mainnet)
+- Verify the amount is reasonable (flag if > 10 SOL)
 - Verify the recipient address looks correct
 - Show the full address, not truncated
+- Double-check token decimals to avoid sending wrong amounts
 
 ### 3. Wallet Verification
 
@@ -109,7 +110,7 @@ Explorer link format:
 
 | Error | Cause | Fix |
 |-------|-------|-----|
-| `Insufficient funds` | Not enough SOL/tokens | Check balance, suggest airdrop on devnet |
+| `Insufficient funds` | Not enough SOL/tokens | Check balance, fund wallet |
 | `Account not found` | ATA doesn't exist | Run create-token-account first |
 | `Blockhash expired` | Transaction took too long | Retry with fresh blockhash |
 | `Transaction too large` | Too many accounts | Use versioned tx with ALT |
@@ -164,7 +165,7 @@ Step 5/5: Transfer 100,000 tokens to recipient
   → Tx: <SIGNATURE>
   ✓ Complete
 
-All steps complete! Token is live on devnet.
+All steps complete! Token is live on mainnet.
 ```
 
 ## Integration with Other Modes
@@ -174,13 +175,14 @@ All steps complete! Token is live on devnet.
 - Use **Build Mode** if the user needs to write code before executing
 - Use **Optimize Mode** if transactions are failing due to compute limits
 
-## Devnet-First Workflow
+## Mainnet Workflow
 
-Always recommend this flow:
-1. **Devnet first** — Test everything on devnet
-2. **Verify results** — Check balances, inspect transactions
-3. **Testnet validation** — Optional second validation
-4. **Mainnet execution** — Only after devnet success, with extra confirmations
+Standard execution flow:
+1. **Confirm network** — Verify mainnet-beta is intended
+2. **Verify wallet** — Show public key, check balance
+3. **Preview transaction** — Show summary with amounts and addresses
+4. **Execute** — Send and confirm transaction
+5. **Verify results** — Check balances, provide explorer link
 
 ## When to Exit Execute Mode
 

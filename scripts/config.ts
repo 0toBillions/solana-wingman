@@ -5,13 +5,13 @@ import { Cluster, clusterApiUrl } from "@solana/web3.js";
  * Central configuration for all Solana Wingman scripts.
  *
  * Environment variables (set in .env or shell):
- *   SOLANA_NETWORK  — "devnet" | "testnet" | "mainnet-beta"  (default: devnet)
+ *   SOLANA_NETWORK  — "devnet" | "testnet" | "mainnet-beta"  (default: mainnet-beta)
  *   SOLANA_RPC_URL  — Custom RPC endpoint (overrides network default)
  *   WALLET_PATH     — Path to keypair JSON file (default: ~/.config/solana/id.json)
  */
 
 export const NETWORK: Cluster =
-  (process.env.SOLANA_NETWORK as Cluster) || "devnet";
+  (process.env.SOLANA_NETWORK as Cluster) || "mainnet-beta";
 
 export const RPC_URL: string =
   process.env.SOLANA_RPC_URL || clusterApiUrl(NETWORK);

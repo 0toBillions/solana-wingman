@@ -12,14 +12,14 @@ npm install
 Create a `.env` file (optional):
 
 ```env
-SOLANA_NETWORK=devnet
-SOLANA_RPC_URL=https://api.devnet.solana.com
+SOLANA_NETWORK=mainnet-beta
+SOLANA_RPC_URL=https://api.mainnet-beta.solana.com
 WALLET_PATH=~/.config/solana/id.json
 # Or provide a base58 private key:
 # WALLET_PRIVATE_KEY=your_base58_key_here
 ```
 
-**Defaults:** devnet network, standard Solana CLI wallet path.
+**Defaults:** mainnet-beta network, standard Solana CLI wallet path.
 
 ## Scripts
 
@@ -126,7 +126,7 @@ npx ts-node actions/check-balance.ts
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `SOLANA_NETWORK` | `devnet` | Cluster: `devnet`, `testnet`, or `mainnet-beta` |
+| `SOLANA_NETWORK` | `mainnet-beta` | Cluster: `devnet`, `testnet`, or `mainnet-beta` |
 | `SOLANA_RPC_URL` | Cluster default | Custom RPC endpoint |
 | `WALLET_PATH` | `~/.config/solana/id.json` | Path to keypair JSON |
 | `WALLET_PRIVATE_KEY` | — | Base58 private key (overrides file) |

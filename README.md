@@ -122,9 +122,9 @@ node --version
 # Solana CLI
 solana --version
 
-# Set up a devnet wallet (if you don't have one)
+# Set up a wallet (if you don't have one)
 solana-keygen new
-solana config set --url devnet
+solana config set --url mainnet-beta
 ```
 
 ### Install & Run Scripts
@@ -133,11 +133,8 @@ solana config set --url devnet
 cd scripts
 npm install
 
-# Quick test — check your balance on devnet
+# Check your balance on mainnet
 npx ts-node actions/check-balance.ts
-
-# Get some devnet SOL
-npx ts-node actions/airdrop-devnet.ts 2
 ```
 
 ### Configuration
@@ -145,8 +142,8 @@ npx ts-node actions/airdrop-devnet.ts 2
 Set environment variables or create `scripts/.env`:
 
 ```env
-SOLANA_NETWORK=devnet
-SOLANA_RPC_URL=https://api.devnet.solana.com
+SOLANA_NETWORK=mainnet-beta
+SOLANA_RPC_URL=https://api.mainnet-beta.solana.com
 WALLET_PATH=~/.config/solana/id.json
 ```
 
