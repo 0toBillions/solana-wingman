@@ -1,0 +1,30 @@
+{
+  "name": "solana-wingman-scripts",
+  "version": "1.0.0",
+  "description": "Execution tooling for Solana Wingman+ — on-chain actions via TypeScript",
+  "private": true,
+  "scripts": {
+    "transfer-sol": "ts-node actions/transfer-sol.ts",
+    "transfer-token": "ts-node actions/transfer-token.ts",
+    "create-token": "ts-node actions/create-token.ts",
+    "create-token-account": "ts-node actions/create-token-account.ts",
+    "mint-tokens": "ts-node actions/mint-tokens.ts",
+    "swap": "ts-node actions/swap-jupiter.ts",
+    "balance": "ts-node actions/check-balance.ts",
+    "deploy": "ts-node actions/deploy-program.ts",
+    "airdrop": "ts-node actions/airdrop-devnet.ts",
+    "fetch-tx": "ts-node actions/fetch-tx.ts"
+  },
+  "dependencies": {
+    "@jup-ag/api": "^6.0.27",
+    "@solana/spl-token": "^0.4.6",
+    "@solana/web3.js": "^1.95.3",
+    "bs58": "^6.0.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}

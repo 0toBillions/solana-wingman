@@ -1,0 +1,192 @@
+{
+  "name": "solana-wingman",
+  "version": "2.0.0",
+  "description": "Enhanced Solana AI agent — teaches development, executes on-chain actions, covers native + Anchor programs, 11 DeFi protocols, and comprehensive security.",
+  "author": "x4484",
+  "license": "MIT",
+  "repository": "https://github.com/x4484/solana-wingman",
+  "homepage": "https://github.com/x4484/solana-wingman#readme",
+
+  "keywords": [
+    "solana",
+    "anchor",
+    "rust",
+    "blockchain",
+    "web3",
+    "smart-contracts",
+    "defi",
+    "nft",
+    "spl-token",
+    "metaplex",
+    "compressed-nft",
+    "token-2022",
+    "agent-skill",
+    "execution",
+    "native-programs",
+    "jupiter",
+    "orca",
+    "drift",
+    "kamino",
+    "meteora",
+    "tensor",
+    "jito",
+    "sanctum",
+    "mev",
+    "lst"
+  ],
+
+  "triggers": [
+    "solana",
+    "anchor",
+    "rust program",
+    "spl token",
+    "metaplex",
+    "nft solana",
+    "pda",
+    "compressed nft",
+    "solana development",
+    "jupiter",
+    "marinade",
+    "marginfi",
+    "raydium",
+    "orca",
+    "drift",
+    "kamino",
+    "meteora",
+    "tensor",
+    "jito",
+    "sanctum",
+    "swap tokens",
+    "send sol",
+    "deploy program",
+    "check balance",
+    "token-2022",
+    "native program",
+    "priority fees",
+    "mev bundle"
+  ],
+
+  "capabilities": [
+    "teach solana concepts",
+    "scaffold anchor projects",
+    "write solana programs",
+    "write native solana programs",
+    "review program security",
+    "debug transactions",
+    "explain pdas",
+    "token operations",
+    "nft creation",
+    "defi integrations",
+    "protocol integration",
+    "execute on-chain transfers",
+    "execute token swaps",
+    "create and mint tokens",
+    "deploy programs",
+    "check balances",
+    "fetch and decode transactions",
+    "jupiter swap execution",
+    "devnet airdrop",
+    "token-2022 extensions",
+    "versioned transactions",
+    "priority fee optimization",
+    "mev bundle awareness"
+  ],
+
+  "files": {
+    "skill": "skills/solana-wingman/SKILL.md",
+    "agents": "AGENTS.md",
+    "cursorrules": ".cursorrules",
+    "readme": "README.md"
+  },
+
+  "knowledge": {
+    "challenges": {
+      "path": "knowledge/challenges/",
+      "count": 10,
+      "description": "Hands-on learning challenges with full Anchor code"
+    },
+    "foundations": {
+      "path": "knowledge/foundations/",
+      "count": 11,
+      "description": "Core Solana concepts (accounts, PDAs, CPIs, native programs, token extensions, versioned txns)"
+    },
+    "gotchas": {
+      "path": "knowledge/gotchas/",
+      "count": 2,
+      "items": ["historical-hacks", "critical-gotchas"],
+      "description": "Security pitfalls: historical exploits and top-10 vulnerability classes"
+    },
+    "protocols": {
+      "path": "knowledge/protocols/",
+      "count": 11,
+      "items": [
+        "jupiter", "marinade", "marginfi", "raydium",
+        "orca", "drift", "kamino", "meteora",
+        "tensor", "jito", "sanctum"
+      ]
+    },
+    "standards": {
+      "path": "knowledge/standards/",
+      "count": 4,
+      "items": ["spl-token", "token-2022", "metaplex-core", "token-metadata"]
+    }
+  },
+
+  "tools": {
+    "anchor": "tools/anchor/",
+    "solana-cli": "tools/solana-cli/",
+    "security": "tools/security/"
+  },
+
+  "data": {
+    "programs": "data/addresses/programs.json",
+    "tokens": "data/addresses/tokens.json",
+    "protocols": "data/addresses/protocols.json"
+  },
+
+  "scripts": {
+    "init": "skills/solana-wingman/scripts/init-project.sh",
+    "check-gotchas": "skills/solana-wingman/scripts/check-gotchas.sh",
+    "setup-cursor": "skills/solana-wingman/scripts/setup-cursor.sh"
+  },
+
+  "execution": {
+    "path": "scripts/",
+    "setup": "cd scripts && npm install",
+    "actions": {
+      "check-balance": "scripts/actions/check-balance.ts",
+      "airdrop-devnet": "scripts/actions/airdrop-devnet.ts",
+      "transfer-sol": "scripts/actions/transfer-sol.ts",
+      "transfer-token": "scripts/actions/transfer-token.ts",
+      "create-token": "scripts/actions/create-token.ts",
+      "create-token-account": "scripts/actions/create-token-account.ts",
+      "mint-tokens": "scripts/actions/mint-tokens.ts",
+      "swap-jupiter": "scripts/actions/swap-jupiter.ts",
+      "deploy-program": "scripts/actions/deploy-program.ts",
+      "fetch-tx": "scripts/actions/fetch-tx.ts"
+    }
+  },
+
+  "prompts": {
+    "build": "prompts/build-mode.md",
+    "audit": "prompts/audit-mode.md",
+    "optimize": "prompts/optimize-mode.md",
+    "learn": "prompts/learn-mode.md",
+    "execute": "prompts/execute-mode.md"
+  },
+
+  "ide": {
+    "claude": ".claude/skills/solana-wingman/",
+    "cursor": ".cursor/commands/",
+    "codex": ".codex/skills/solana-wingman/",
+    "agents": ".agents/skills/solana-wingman/",
+    "opencode": ".opencode/skills/solana-wingman/"
+  },
+
+  "compatibility": {
+    "anchor": ">=0.29.0",
+    "solana-cli": ">=1.17.0",
+    "rust": ">=1.70.0",
+    "node": ">=18.0.0"
+  }
+}
